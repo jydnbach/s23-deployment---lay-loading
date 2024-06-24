@@ -1,5 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import RootLayout from './pages/Root';
+import HomePage from './pages/Home';
+import PostPage from './pages/Post';
+import BlogPage from './pages/Blog';
+
 const router = createBrowserRouter([
   {
     path: '/',
