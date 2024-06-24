@@ -2,8 +2,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import RootLayout from './pages/Root';
 import HomePage from './pages/Home';
-import PostPage from './pages/Post';
-import BlogPage, { loader as pageLoader } from './pages/Blog';
+import PostPage, { loader as postLoader } from './pages/Post';
+import BlogPage, { loader as postsLoader } from './pages/Blog';
 
 const router = createBrowserRouter([
   {
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
       {
         path: 'posts',
         children: [
-          { index: true, element: <BlogPage />, loader: pageLoader },
-          { path: 'id', element: <PostPage /> },
+          { index: true, element: <BlogPage />, loader: postsLoader },
+          { path: 'id', element: <PostPage />, loader: postLoader },
         ],
       },
     ],
