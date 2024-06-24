@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         path: 'posts',
         children: [
           { index: true, element: <BlogPage />, loader: postsLoader },
-          { path: 'id', element: <PostPage />, loader: postLoader },
+          { path: ':id', element: <PostPage />, loader: postLoader },
         ],
       },
     ],
